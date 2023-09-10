@@ -91,22 +91,22 @@ function Functions.GetSource(identifier) end
 
 ---Get player with given server id (source)
 ---@param source any
----@return QBPlayerData?
+---@return QBPlayerObject?
 function Functions.GetPlayer(source) end
 
 ---Get player by citizen id
 ---@param citizenid string
----@return QBPlayerData?
+---@return QBPlayerObject?
 function Functions.GetPlayerByCitizenId(citizenid) end
 
 ---Get offline player by citizen id
 ---@param citizenid string
----@return QBPlayerData?
+---@return QBPlayerObject?
 function Functions.GetOfflinePlayerByCitizenId(citizenid) end
 
 ---Get player by phone number
 ---@param number number
----@return QBPlayerData?
+---@return QBPlayerObject?
 function Functions.GetPlayerByPhone(number) end
 
 ---Get all players. Returns the server ids of all players.
@@ -115,7 +115,7 @@ function QBCore.Functions.GetPlayers() end
 
 ---Will return an array of QB Player class instances
 ---unlike the GetPlayers() wrapper which only returns IDs
----@return QBPlayerData[]
+---@return QBPlayerObject[]
 function Functions.GetQBPlayers() end
 
 ---Gets a list of all on duty players of a specified job and the number
