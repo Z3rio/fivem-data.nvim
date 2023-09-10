@@ -1,0 +1,14 @@
+---@meta
+
+---@class QBShared_ItemData
+---@field name string
+---@field label string
+---@field weight number
+---@field type "weapon" | "item"
+---@field ammotype? string
+---@field image string
+---@field unique boolean
+---@field useable boolean
+---@field description string
+---@field shouldClose? boolean
+---@field combinable? unknown
