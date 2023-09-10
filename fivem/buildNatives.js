@@ -6,11 +6,23 @@ const path = require("node:path");
 (async () => {
   // clean up
   const folderNames = ["CFX-NATIVE", "GTAV", "RDR3"];
+  if (fs.existsSync("./Lua") == false) {
+    fs.mkdirSync("./Lua");
+  }
+
+  if (fs.existsSync("./Lua/natives") == false) {
+    fs.mkdirSync("./Lua/natives");
+  }
+
   for (const folderName of folderNames) {
-    for (const file of fs.readdirSync(`./Lua/natives/${folderName}`)) {
-      if (file.endsWith(".lua")) {
-        fs.unlinkSync(path.join(`./Lua/natives/${folderName}`, file));
+    if (fs.existsSync(`./Lua/natives/${folderName}`)) {
+      for (const file of fs.readdirSync(`./Lua/natives/${folderName}`)) {
+        if (file.endsWith(".lua")) {
+          fs.unlinkSync(path.join(`./Lua/natives/${folderName}`, file));
+        }
       }
+    } else {
+      fs.mkdirSync(`./Lua/natives/${folderName}`);
     }
   }
 

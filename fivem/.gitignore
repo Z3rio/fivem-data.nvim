@@ -4,6 +4,7 @@ node_modules
 # build
 library
 dist
+Lua
 
 # lock files
 package-lock.json
