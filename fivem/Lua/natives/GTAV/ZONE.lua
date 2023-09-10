@@ -14,6 +14,22 @@
 function ClearPopscheduleOverrideVehicleModel(scheduleId) end
 
 ---```
+---Returns a hash representing which part of the map the given coords are located.  
+---Possible return values:  
+---(Hash of) city -> -289320599  
+---(Hash of) countryside -> 2072609373  
+---C# Example :  
+---Ped player = Game.Player.Character;  
+---Hash h = Function.Call<Hash>(Hash.GET_HASH_OF_MAP_AREA_AT_COORDS, player.Position.X, player.Position.Y, player.Position.Z);  
+---```
+---[Native Documentation](https://docs.fivem.net/natives/?_0x7EE64D51E8498728)
+---@param x number 
+---@param y number 
+---@param z number 
+---@return number | string retval 
+function GetHashOfMapAreaAtCoords(x, y, z) end
+
+---```
 ---AIRP = Los Santos International Airport  
 ---ALAMO = Alamo Sea  
 ---ALTA = Alta  
@@ -113,21 +129,13 @@ function ClearPopscheduleOverrideVehicleModel(scheduleId) end
 ---@return string retval 
 function GetNameOfZone(x, y, z) end
 
----```
----Returns a hash representing which part of the map the given coords are located.  
----Possible return values:  
----(Hash of) city -> -289320599  
----(Hash of) countryside -> 2072609373  
----C# Example :  
----Ped player = Game.Player.Character;  
----Hash h = Function.Call<Hash>(Hash.GET_HASH_OF_MAP_AREA_AT_COORDS, player.Position.X, player.Position.Y, player.Position.Z);  
----```
----[Native Documentation](https://docs.fivem.net/natives/?_0x7EE64D51E8498728)
+---
+---[Native Documentation](https://docs.fivem.net/natives/?_0x27040C25DE6CB2F4)
 ---@param x number 
 ---@param y number 
 ---@param z number 
----@return number | string retval 
-function GetHashOfMapAreaAtCoords(x, y, z) end
+---@return number retval 
+function GetZoneAtCoords(x, y, z) end
 
 ---```
 ---'zoneName' corresponds to an entry in 'popzone.ipl'.  
@@ -227,20 +235,6 @@ function GetHashOfMapAreaAtCoords(x, y, z) end
 function GetZoneFromNameId(zoneName) end
 
 ---
----[Native Documentation](https://docs.fivem.net/natives/?_0xBA5ECEEA120E5611)
----@param zoneId number 
----@param toggle boolean 
-function SetZoneEnabled(zoneId, toggle) end
-
----
----[Native Documentation](https://docs.fivem.net/natives/?_0x27040C25DE6CB2F4)
----@param x number 
----@param y number 
----@param z number 
----@return number retval 
-function GetZoneAtCoords(x, y, z) end
-
----
 ---[Native Documentation](https://docs.fivem.net/natives/?_0x4334BC40AA0CB4BB)
 ---@param zoneId number 
 ---@return number retval 
@@ -277,4 +271,10 @@ function GetZoneScumminess(zoneId) end
 ---@param scheduleId number 
 ---@param vehicleHash number | string 
 function OverridePopscheduleVehicleModel(scheduleId, vehicleHash) end
+
+---
+---[Native Documentation](https://docs.fivem.net/natives/?_0xBA5ECEEA120E5611)
+---@param zoneId number 
+---@param toggle boolean 
+function SetZoneEnabled(zoneId, toggle) end
 

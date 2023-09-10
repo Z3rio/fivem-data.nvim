@@ -33,8 +33,8 @@ function GetWaterHeightNoWaves(x, y, z, height) end
 ---@param y2 number 
 ---@param z2 number 
 ---@param flags number 
----@param waterHeight number 
-function TestProbeAgainstAllWater(x1, y1, z1, x2, y2, z2, flags, waterHeight) end
+---@param intersectionPos vector3 
+function TestProbeAgainstAllWater(x1, y1, z1, x2, y2, z2, flags, intersectionPos) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)

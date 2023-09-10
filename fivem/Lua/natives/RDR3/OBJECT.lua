@@ -218,9 +218,9 @@ function N_undefined(p0, p1) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
----@param p1 any 
-function N_undefined(p0, p1) end
+---@param doorHash number | string 
+---@param disable boolean 
+function DoorSystemSetAutomaticState(doorHash, disable) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)

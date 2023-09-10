@@ -199,7 +199,7 @@ function N_undefined(audSpeechEvent) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 number 
+---@param p0 boolean 
 function RegisterScriptWithAudio(p0) end
 
 ---This native does not have an official description.

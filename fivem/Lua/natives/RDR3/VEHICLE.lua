@@ -878,8 +878,8 @@ function DeleteMissionTrain(train) end
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
 ---@param train number 
----@param p1 boolean 
-function SetMissionTrainAsNoLongerNeeded(train, p1) end
+---@param flags number 
+function SetMissionTrainAsNoLongerNeeded(train, flags) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -1496,12 +1496,12 @@ function N_undefined(p0, p1, p2) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param vehicleAsset number 
+---@param vehicleAsset number | string 
 function HasVehicleAssetLoaded(vehicleAsset) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param vehicleAsset number 
+---@param vehicleAsset number | string 
 function RemoveVehicleAsset(vehicleAsset) end
 
 ---This native does not have an official description.

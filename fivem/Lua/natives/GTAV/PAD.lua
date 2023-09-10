@@ -1,15 +1,5 @@
 ---@meta
 
----[Control values and meaning](https://docs.fivem.net/docs/game-references/controls/#controls)
----
----Example: `CONTROLS::DISABLE_CONTROL_ACTION(2, 19, true)` disables the switching UI from appearing both when using a keyboard and Xbox 360 controller. Needs to be executed each frame.
----Control group 1 and 0 gives the same results as 2. Same results for all players.
----[Native Documentation](https://docs.fivem.net/natives/?_0xFE99B66D079CF6BC)
----@param padIndex number 
----@param control number 
----@param disable boolean 
-function DisableControlAction(padIndex, control, disable) end
-
 ---
 ---[Native Documentation](https://docs.fivem.net/natives/?_0x5F4B6931816E599B)
 ---@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
@@ -25,45 +15,15 @@ function DisableInputGroup(padIndex) end
 ---@param padIndex number 
 function N_0x7F4724035FDCA1DD(padIndex) end
 
----```
----padIndex: 
----0 - PLAYER_CONTROL
----1 - Unknown 
----2 - FRONTEND_CONTROL
----```
----[Native Documentation](https://docs.fivem.net/natives/?_0xA5FFE9B05F199DE7)
----@param padIndex number The control system instance to use.
-function EnableAllControlActions(padIndex) end
-
----```
----Returns profile setting 17.
----```
----[Native Documentation](https://docs.fivem.net/natives/?_0xFC859E2374407556)
----@return boolean retval 
-function GetAllowMovementWhileZoomed() end
-
----```
----Returns profile setting 17.
----```
----[Native Documentation](https://docs.fivem.net/natives/?_0xFC859E2374407556)
----@return boolean retval 
-function N_0xFC859E2374407556() end
-
+---[Control values and meaning](https://docs.fivem.net/docs/game-references/controls/#controls)
 ---
----[Native Documentation](https://docs.fivem.net/natives/?_0x80C2FD58D720C801)
----@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
----@param controlGroup number 
----@param p2 boolean 
----@return string retval 
-function GetControlGroupInstructionalButton(padIndex, controlGroup, p2) end
-
----
----[Native Documentation](https://docs.fivem.net/natives/?_0x80C2FD58D720C801)
----@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
----@param controlGroup number 
----@param p2 boolean 
----@return string retval 
-function N_0x80C2FD58D720C801(padIndex, controlGroup, p2) end
+---Example: `CONTROLS::DISABLE_CONTROL_ACTION(2, 19, true)` disables the switching UI from appearing both when using a keyboard and Xbox 360 controller. Needs to be executed each frame.
+---Control group 1 and 0 gives the same results as 2. Same results for all players.
+---[Native Documentation](https://docs.fivem.net/natives/?_0xFE99B66D079CF6BC)
+---@param padIndex number 
+---@param control number 
+---@param disable boolean 
+function DisableControlAction(padIndex, control, disable) end
 
 ---```
 ---control values and meaning: github.com/crosire/scripthookvdotnet/blob/dev_v3/source/scripting/Control.cs  
@@ -118,36 +78,44 @@ function N_0x80C2FD58D720C801(padIndex, controlGroup, p2) end
 function EnableControlAction(padIndex, control, enable) end
 
 ---```
----Seems to return values between -1 and 1 for controls like gas and steering.
+---padIndex: 
+---0 - PLAYER_CONTROL
+---1 - Unknown 
+---2 - FRONTEND_CONTROL
 ---```
----[Native Documentation](https://docs.fivem.net/natives/?_0x5B84D09CEC5209C5)
----@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
----@param control number The [control ID](https://docs.fivem.net/docs/game-references/controls/#controls) to check.
----@return number retval 
-function GetControlUnboundNormal(padIndex, control) end
+---[Native Documentation](https://docs.fivem.net/natives/?_0xA5FFE9B05F199DE7)
+---@param padIndex number The control system instance to use.
+function EnableAllControlActions(padIndex) end
 
 ---```
----Seems to return values between -1 and 1 for controls like gas and steering.
+---Returns profile setting 17.
 ---```
----[Native Documentation](https://docs.fivem.net/natives/?_0x5B84D09CEC5209C5)
----@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
----@param control number The [control ID](https://docs.fivem.net/docs/game-references/controls/#controls) to check.
----@return number retval 
-function N_0x5B84D09CEC5209C5(padIndex, control) end
-
----```
----Returns profile setting 225.
----```
----[Native Documentation](https://docs.fivem.net/natives/?_0x0F70731BACCFBB96)
+---[Native Documentation](https://docs.fivem.net/natives/?_0xFC859E2374407556)
 ---@return boolean retval 
-function GetIsUsingAlternateDriveby() end
+function GetAllowMovementWhileZoomed() end
 
 ---```
----Returns profile setting 225.
+---Returns profile setting 17.
 ---```
----[Native Documentation](https://docs.fivem.net/natives/?_0x0F70731BACCFBB96)
+---[Native Documentation](https://docs.fivem.net/natives/?_0xFC859E2374407556)
 ---@return boolean retval 
-function N_0x0F70731BACCFBB96() end
+function N_0xFC859E2374407556() end
+
+---
+---[Native Documentation](https://docs.fivem.net/natives/?_0x80C2FD58D720C801)
+---@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
+---@param controlGroup number 
+---@param p2 boolean 
+---@return string retval 
+function GetControlGroupInstructionalButton(padIndex, controlGroup, p2) end
+
+---
+---[Native Documentation](https://docs.fivem.net/natives/?_0x80C2FD58D720C801)
+---@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
+---@param controlGroup number 
+---@param p2 boolean 
+---@return string retval 
+function N_0x80C2FD58D720C801(padIndex, controlGroup, p2) end
 
 ---```
 ---formerly called _GET_CONTROL_ACTION_NAME incorrectly  
@@ -185,6 +153,52 @@ function GetControlInstructionalButton(padIndex, control, p2) end
 ---@return string retval 
 function N_0x0499D7B09FC9B407(padIndex, control, p2) end
 
+---
+---[Native Documentation](https://docs.fivem.net/natives/?_0xEC3C9B8D5327B563)
+---@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
+---@param control number The [control ID](https://docs.fivem.net/docs/game-references/controls/#controls) to check.
+---@return number retval Returns the value of [`GET_CONTROL_VALUE`](#\_0xD95E79E8686D2C27) normalized, i.e. a real number value between -1.0 and 1.0
+function GetControlNormal(padIndex, control) end
+
+---
+---[Native Documentation](https://docs.fivem.net/natives/?_0xD95E79E8686D2C27)
+---@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
+---@param control number The [control ID](https://docs.fivem.net/docs/game-references/controls/#controls) to check.
+---@return number retval 
+function GetControlValue(padIndex, control) end
+
+---```
+---Seems to return values between -1 and 1 for controls like gas and steering.
+---```
+---[Native Documentation](https://docs.fivem.net/natives/?_0x5B84D09CEC5209C5)
+---@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
+---@param control number The [control ID](https://docs.fivem.net/docs/game-references/controls/#controls) to check.
+---@return number retval 
+function GetControlUnboundNormal(padIndex, control) end
+
+---```
+---Seems to return values between -1 and 1 for controls like gas and steering.
+---```
+---[Native Documentation](https://docs.fivem.net/natives/?_0x5B84D09CEC5209C5)
+---@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
+---@param control number The [control ID](https://docs.fivem.net/docs/game-references/controls/#controls) to check.
+---@return number retval 
+function N_0x5B84D09CEC5209C5(padIndex, control) end
+
+---
+---[Native Documentation](https://docs.fivem.net/natives/?_0x4F8A26A890FD62FB)
+---@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
+---@param control number The [control ID](https://docs.fivem.net/docs/game-references/controls/#controls) to check.
+---@return number retval 
+function GetDisabledControlUnboundNormal(padIndex, control) end
+
+---
+---[Native Documentation](https://docs.fivem.net/natives/?_0x4F8A26A890FD62FB)
+---@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
+---@param control number The [control ID](https://docs.fivem.net/docs/game-references/controls/#controls) to check.
+---@return number retval 
+function N_0x4F8A26A890FD62FB(padIndex, control) end
+
 ---Returns the local player's targeting mode. See [`SET_PLAYER_TARGETING_MODE`](#\_0xB1906895227793F3).
 ---[Native Documentation](https://docs.fivem.net/natives/?_0xBB41AFBBBC0A0287)
 ---@return number retval 
@@ -205,46 +219,25 @@ function GetLocalPlayerAimState2() end
 function N_0x59B9A7AF4C95133C() end
 
 ---
----[Native Documentation](https://docs.fivem.net/natives/?_0xEC3C9B8D5327B563)
----@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
----@param control number The [control ID](https://docs.fivem.net/docs/game-references/controls/#controls) to check.
----@return number retval Returns the value of [`GET_CONTROL_VALUE`](#\_0xD95E79E8686D2C27) normalized, i.e. a real number value between -1.0 and 1.0
-function GetControlNormal(padIndex, control) end
-
----
----[Native Documentation](https://docs.fivem.net/natives/?_0x1CEA6BFDF248E5D9)
----@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
----@param control number The [control ID](https://docs.fivem.net/docs/game-references/controls/#controls) to check.
----@return boolean retval 
-function IsControlEnabled(padIndex, control) end
-
----
----[Native Documentation](https://docs.fivem.net/natives/?_0xD95E79E8686D2C27)
----@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
----@param control number The [control ID](https://docs.fivem.net/docs/game-references/controls/#controls) to check.
----@return number retval 
-function GetControlValue(padIndex, control) end
-
----
 ---[Native Documentation](https://docs.fivem.net/natives/?_0x11E65974A982637C)
 ---@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
 ---@param control number The [control ID](https://docs.fivem.net/docs/game-references/controls/#controls) to check.
 ---@return number retval 
 function GetDisabledControlNormal(padIndex, control) end
 
----
----[Native Documentation](https://docs.fivem.net/natives/?_0x4F8A26A890FD62FB)
----@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
----@param control number The [control ID](https://docs.fivem.net/docs/game-references/controls/#controls) to check.
----@return number retval 
-function GetDisabledControlUnboundNormal(padIndex, control) end
+---```
+---Returns profile setting 225.
+---```
+---[Native Documentation](https://docs.fivem.net/natives/?_0x0F70731BACCFBB96)
+---@return boolean retval 
+function GetIsUsingAlternateDriveby() end
 
----
----[Native Documentation](https://docs.fivem.net/natives/?_0x4F8A26A890FD62FB)
----@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
----@param control number The [control ID](https://docs.fivem.net/docs/game-references/controls/#controls) to check.
----@return number retval 
-function N_0x4F8A26A890FD62FB(padIndex, control) end
+---```
+---Returns profile setting 225.
+---```
+---[Native Documentation](https://docs.fivem.net/natives/?_0x0F70731BACCFBB96)
+---@return boolean retval 
+function N_0x0F70731BACCFBB96() end
 
 ---```
 ---The number of milliseconds since last padIndex registered pressed
@@ -262,19 +255,12 @@ function GetTimeSinceLastInput(padIndex) end
 ---@return number retval 
 function N_0xD7D22F5592AED8BA(padIndex) end
 
----Returns whether a control was newly released since the last check.
----[Native Documentation](https://docs.fivem.net/natives/?_0x50F940259D3841E6)
+---
+---[Native Documentation](https://docs.fivem.net/natives/?_0x1CEA6BFDF248E5D9)
 ---@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
 ---@param control number The [control ID](https://docs.fivem.net/docs/game-references/controls/#controls) to check.
----@return boolean retval True if the control was recently released.
-function IsControlJustReleased(padIndex, control) end
-
----Returns whether a control is currently *not* pressed.
----[Native Documentation](https://docs.fivem.net/natives/?_0x648EE3E7F38877DD)
----@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
----@param control number The [control ID](https://docs.fivem.net/docs/game-references/controls/#controls) to check.
----@return boolean retval True if the control is not pressed.
-function IsControlReleased(padIndex, control) end
+---@return boolean retval 
+function IsControlEnabled(padIndex, control) end
 
 ---Returns whether a control was newly pressed since the last check.
 ---[Native Documentation](https://docs.fivem.net/natives/?_0x580417101DDB492F)
@@ -290,12 +276,19 @@ function IsControlJustPressed(padIndex, control) end
 ---@return boolean retval True if the control was pressed.
 function IsControlPressed(padIndex, control) end
 
----
----[Native Documentation](https://docs.fivem.net/natives/?_0x305C8DCD79DA8B0F)
+---Returns whether a control was newly released since the last check.
+---[Native Documentation](https://docs.fivem.net/natives/?_0x50F940259D3841E6)
 ---@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
 ---@param control number The [control ID](https://docs.fivem.net/docs/game-references/controls/#controls) to check.
----@return boolean retval 
-function IsDisabledControlJustReleased(padIndex, control) end
+---@return boolean retval True if the control was recently released.
+function IsControlJustReleased(padIndex, control) end
+
+---Returns whether a control is currently *not* pressed.
+---[Native Documentation](https://docs.fivem.net/natives/?_0x648EE3E7F38877DD)
+---@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
+---@param control number The [control ID](https://docs.fivem.net/docs/game-references/controls/#controls) to check.
+---@return boolean retval True if the control is not pressed.
+function IsControlReleased(padIndex, control) end
 
 ---
 ---[Native Documentation](https://docs.fivem.net/natives/?_0x91AEF906BCA88877)
@@ -305,25 +298,18 @@ function IsDisabledControlJustReleased(padIndex, control) end
 function IsDisabledControlJustPressed(padIndex, control) end
 
 ---
+---[Native Documentation](https://docs.fivem.net/natives/?_0x305C8DCD79DA8B0F)
+---@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
+---@param control number The [control ID](https://docs.fivem.net/docs/game-references/controls/#controls) to check.
+---@return boolean retval 
+function IsDisabledControlJustReleased(padIndex, control) end
+
+---
 ---[Native Documentation](https://docs.fivem.net/natives/?_0xE2587F8CBBD87B1D)
 ---@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
 ---@param control number The [control ID](https://docs.fivem.net/docs/game-references/controls/#controls) to check.
 ---@return boolean retval 
 function IsDisabledControlPressed(padIndex, control) end
-
----
----[Native Documentation](https://docs.fivem.net/natives/?_0x77B612531280010D)
----@return boolean retval 
-function IsLookInverted() end
-
----**This native does absolutely nothing, just a nullsub**
----[Native Documentation](https://docs.fivem.net/natives/?_0x14D29BB12D47F68C)
----@param p0 any 
----@param p1 any 
----@param p2 any 
----@param p3 any 
----@param p4 any 
-function N_0x14D29BB12D47F68C(p0, p1, p2, p3, p4) end
 
 ---
 ---[Native Documentation](https://docs.fivem.net/natives/?_0xFB6C4072E9A32E92)
@@ -340,9 +326,9 @@ function IsDisabledControlReleased(padIndex, control) end
 function N_0xFB6C4072E9A32E92(padIndex, control) end
 
 ---
----[Native Documentation](https://docs.fivem.net/natives/?_0x5B73C77D9EB66E24)
----@param p0 boolean 
-function N_0x5B73C77D9EB66E24(p0) end
+---[Native Documentation](https://docs.fivem.net/natives/?_0x77B612531280010D)
+---@return boolean retval 
+function IsLookInverted() end
 
 ---
 ---[Native Documentation](https://docs.fivem.net/natives/?_0xA571D46727E2B718)
@@ -363,14 +349,71 @@ function GetLastInputMethod(padIndex) end
 function IsInputDisabled(padIndex) end
 
 ---
+---[Native Documentation](https://docs.fivem.net/natives/?_0x13337B38DB572509)
+---@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
+---@return boolean retval 
+function IsUsingKeyboard2(padIndex) end
+
+---
+---[Native Documentation](https://docs.fivem.net/natives/?_0x13337B38DB572509)
+---@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
+---@return boolean retval 
+function N_0x13337B38DB572509(padIndex) end
+
+---
+---[Native Documentation](https://docs.fivem.net/natives/?_0x13337B38DB572509)
+---@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
+---@return boolean retval 
+function IsInputJustDisabled(padIndex) end
+
+---**This native does absolutely nothing, just a nullsub**
+---[Native Documentation](https://docs.fivem.net/natives/?_0x14D29BB12D47F68C)
+---@param p0 any 
+---@param p1 any 
+---@param p2 any 
+---@param p3 any 
+---@param p4 any 
+function N_0x14D29BB12D47F68C(p0, p1, p2, p3, p4) end
+
+---Hardcoded to return false.
+---[Native Documentation](https://docs.fivem.net/natives/?_0x23F09EADC01449D6)
+---@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
+---@return boolean retval 
+function N_0x23F09EADC01449D6(padIndex) end
+
+---```
+---NativeDB Introduced: v1365
+---```
+---[Native Documentation](https://docs.fivem.net/natives/?_0x25AAA32BDC98F2A3)
+---@return any retval 
+function N_0x25AAA32BDC98F2A3() end
+
+---
 ---[Native Documentation](https://docs.fivem.net/natives/?_0xA0CEFCEA390AAB9B)
 ---@param p0 any 
 function N_0xA0CEFCEA390AAB9B(p0) end
 
 ---
+---[Native Documentation](https://docs.fivem.net/natives/?_0x5B73C77D9EB66E24)
+---@param p0 boolean 
+function N_0x5B73C77D9EB66E24(p0) end
+
+---
 ---[Native Documentation](https://docs.fivem.net/natives/?_0xCB0360EFEFB2580D)
 ---@param padIndex number 
 function N_0xCB0360EFEFB2580D(padIndex) end
+
+---
+---[Native Documentation](https://docs.fivem.net/natives/?_0x6CD79468A1E595C6)
+---@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
+---@return boolean retval 
+function N_0x6CD79468A1E595C6(padIndex) end
+
+---
+---[Native Documentation](https://docs.fivem.net/natives/?_0xF239400E16C23E08)
+---@param padIndex number 
+---@param p1 number 
+function N_0xF239400E16C23E08(padIndex, p1) end
 
 ---```
 ---Used with IS_LOOK_INVERTED() and negates its affect.
@@ -390,92 +433,6 @@ function N_0xCB0360EFEFB2580D(padIndex) end
 ---[Native Documentation](https://docs.fivem.net/natives/?_0xE1615EC03B3BB4FD)
 ---@return boolean retval 
 function N_0xE1615EC03B3BB4FD() end
-
----
----[Native Documentation](https://docs.fivem.net/natives/?_0x13337B38DB572509)
----@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
----@return boolean retval 
-function IsUsingKeyboard2(padIndex) end
-
----
----[Native Documentation](https://docs.fivem.net/natives/?_0x13337B38DB572509)
----@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
----@return boolean retval 
-function N_0x13337B38DB572509(padIndex) end
-
----
----[Native Documentation](https://docs.fivem.net/natives/?_0x13337B38DB572509)
----@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
----@return boolean retval 
-function IsInputJustDisabled(padIndex) end
-
----
----[Native Documentation](https://docs.fivem.net/natives/?_0xF239400E16C23E08)
----@param padIndex number 
----@param p1 number 
-function N_0xF239400E16C23E08(padIndex, p1) end
-
----This is for simulating player input.
----[Native Documentation](https://docs.fivem.net/natives/?_0xE8A25867FBA3B05E)
----@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
----@param control number The [control ID](https://docs.fivem.net/docs/game-references/controls/#controls) to check.
----@param amount number An unbounded normal value.
----@return boolean retval 
-function SetControlNormal(padIndex, control, amount) end
-
----This is for simulating player input.
----[Native Documentation](https://docs.fivem.net/natives/?_0xE8A25867FBA3B05E)
----@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
----@param control number The [control ID](https://docs.fivem.net/docs/game-references/controls/#controls) to check.
----@param amount number An unbounded normal value.
----@return boolean retval 
-function N_0xE8A25867FBA3B05E(padIndex, control, amount) end
-
----Hardcoded to return false.
----[Native Documentation](https://docs.fivem.net/natives/?_0x23F09EADC01449D6)
----@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
----@return boolean retval 
-function N_0x23F09EADC01449D6(padIndex) end
-
----```
----NativeDB Introduced: v1365
----```
----[Native Documentation](https://docs.fivem.net/natives/?_0x25AAA32BDC98F2A3)
----@return any retval 
-function N_0x25AAA32BDC98F2A3() end
-
----
----[Native Documentation](https://docs.fivem.net/natives/?_0xFC695459D4D0E219)
----@param x number 
----@param y number 
----@return boolean retval 
-function SetCursorLocation(x, y) end
-
----
----[Native Documentation](https://docs.fivem.net/natives/?_0xFC695459D4D0E219)
----@param x number 
----@param y number 
----@return boolean retval 
-function N_0xFC695459D4D0E219(x, y) end
-
----
----[Native Documentation](https://docs.fivem.net/natives/?_0x6CD79468A1E595C6)
----@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
----@return boolean retval 
-function N_0x6CD79468A1E595C6(padIndex) end
-
----```
----p0 always seems to be 0  
----duration in milliseconds   
----frequency should range from about 10 (slow vibration) to 255 (very fast)  
----example:  
----SET_PAD_SHAKE(0, 100, 200);  
----```
----[Native Documentation](https://docs.fivem.net/natives/?_0x48B3886C1358D0D5)
----@param padIndex number 
----@param duration number 
----@param frequency number 
-function SetPadShake(padIndex, duration, frequency) end
 
 ---```
 ---S*
@@ -513,6 +470,36 @@ function N_0x8290252FFF36ACB5(padIndex, red, green, blue) end
 ---@param blue number 
 function SetControlGroupColor(padIndex, red, green, blue) end
 
+---This is for simulating player input.
+---[Native Documentation](https://docs.fivem.net/natives/?_0xE8A25867FBA3B05E)
+---@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
+---@param control number The [control ID](https://docs.fivem.net/docs/game-references/controls/#controls) to check.
+---@param amount number An unbounded normal value.
+---@return boolean retval 
+function SetControlNormal(padIndex, control, amount) end
+
+---This is for simulating player input.
+---[Native Documentation](https://docs.fivem.net/natives/?_0xE8A25867FBA3B05E)
+---@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
+---@param control number The [control ID](https://docs.fivem.net/docs/game-references/controls/#controls) to check.
+---@param amount number An unbounded normal value.
+---@return boolean retval 
+function N_0xE8A25867FBA3B05E(padIndex, control, amount) end
+
+---
+---[Native Documentation](https://docs.fivem.net/natives/?_0xFC695459D4D0E219)
+---@param x number 
+---@param y number 
+---@return boolean retval 
+function SetCursorLocation(x, y) end
+
+---
+---[Native Documentation](https://docs.fivem.net/natives/?_0xFC695459D4D0E219)
+---@param x number 
+---@param y number 
+---@return boolean retval 
+function N_0xFC695459D4D0E219(x, y) end
+
 ---
 ---[Native Documentation](https://docs.fivem.net/natives/?_0xEDE476E5EE29EDB1)
 ---@param padIndex number The control system instance to use. See [`ENABLE_ALL_CONTROL_ACTIONS`](#\_0xA5FFE9B05F199DE7).
@@ -520,32 +507,22 @@ function SetControlGroupColor(padIndex, red, green, blue) end
 function SetInputExclusive(padIndex, control) end
 
 ---
----[Native Documentation](https://docs.fivem.net/natives/?_0x38C16A305E8CDC8D)
----@param padIndex number 
-function StopPadShake(padIndex) end
-
----
 ---[Native Documentation](https://docs.fivem.net/natives/?_0x798FDEB5B1575088)
 ---@param toggle boolean 
 function SetPlayerpadShakesWhenControllerDisabled(toggle) end
 
 ---```
----Used in carsteal3 script with p0 = "Carsteal4_spycar".
----S*
+---p0 always seems to be 0  
+---duration in milliseconds   
+---frequency should range from about 10 (slow vibration) to 255 (very fast)  
+---example:  
+---SET_PAD_SHAKE(0, 100, 200);  
 ---```
----[Native Documentation](https://docs.fivem.net/natives/?_0x3D42B92563939375)
----@param name string 
----@return boolean retval 
-function SwitchToInputMappingScheme(name) end
-
----```
----Used in carsteal3 script with p0 = "Carsteal4_spycar".
----S*
----```
----[Native Documentation](https://docs.fivem.net/natives/?_0x3D42B92563939375)
----@param name string 
----@return boolean retval 
-function N_0x3D42B92563939375(name) end
+---[Native Documentation](https://docs.fivem.net/natives/?_0x48B3886C1358D0D5)
+---@param padIndex number 
+---@param duration number 
+---@param frequency number 
+function SetPadShake(padIndex, duration, frequency) end
 
 ---```
 ---Same as 0x3D42B92563939375
@@ -566,4 +543,27 @@ function SwitchToInputMappingScheme2(name) end
 ---@param name string 
 ---@return boolean retval 
 function N_0x4683149ED1DDE7A1(name) end
+
+---
+---[Native Documentation](https://docs.fivem.net/natives/?_0x38C16A305E8CDC8D)
+---@param padIndex number 
+function StopPadShake(padIndex) end
+
+---```
+---Used in carsteal3 script with p0 = "Carsteal4_spycar".
+---S*
+---```
+---[Native Documentation](https://docs.fivem.net/natives/?_0x3D42B92563939375)
+---@param name string 
+---@return boolean retval 
+function SwitchToInputMappingScheme(name) end
+
+---```
+---Used in carsteal3 script with p0 = "Carsteal4_spycar".
+---S*
+---```
+---[Native Documentation](https://docs.fivem.net/natives/?_0x3D42B92563939375)
+---@param name string 
+---@return boolean retval 
+function N_0x3D42B92563939375(name) end
 

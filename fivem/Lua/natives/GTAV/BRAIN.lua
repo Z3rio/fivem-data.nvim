@@ -19,15 +19,15 @@ function AddScriptToRandomPed(name, model, p2, p3) end
 function DisableScriptBrainSet(brainSet) end
 
 ---
----[Native Documentation](https://docs.fivem.net/natives/?_0x67AA4D73F0CFA86B)
----@param brainSet number 
-function EnableScriptBrainSet(brainSet) end
-
----
 ---[Native Documentation](https://docs.fivem.net/natives/?_0xCCBA154209823057)
 ---@param object number 
 ---@return boolean retval 
 function IsObjectWithinBrainActivationRange(object) end
+
+---
+---[Native Documentation](https://docs.fivem.net/natives/?_0x67AA4D73F0CFA86B)
+---@param brainSet number 
+function EnableScriptBrainSet(brainSet) end
 
 ---```
 ---Gets whether the world point the calling script is registered to is within desired range of the player.  

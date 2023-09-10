@@ -915,8 +915,8 @@ function SetDefenseModifierForPed(ped, modifier) end
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
 ---@param ped number 
----@param healthLimit number 
-function N_undefined(ped, healthLimit) end
+---@param healthAmount number 
+function SetMinPedHealthThreshold(ped, healthAmount) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -1257,8 +1257,8 @@ function IsPedBeingJacked(ped) end
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
 ---@param ped number 
----@param p1 number 
-function IsPedBeingStunned(ped, p1) end
+---@param weaponType number | string 
+function IsPedBeingStunned(ped, weaponType) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -1937,10 +1937,10 @@ function ForcePedDeath(ped, pedKiller, weapon) end
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
 ---@param ped number 
 ---@param damageAmount number 
----@param p2 number 
+---@param damageArmour boolean 
 ---@param boneId number 
 ---@param pedKiller number 
-function ApplyDamageToPed(ped, damageAmount, p2, boneId, pedKiller) end
+function ApplyDamageToPed(ped, damageAmount, damageArmour, boneId, pedKiller) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -2512,10 +2512,10 @@ function CanPedRagdoll(ped) end
 ---@param timeMin number 
 ---@param timeMax number 
 ---@param ragdollType number 
----@param p4 boolean 
----@param p5 boolean 
----@param p6 const char 
-function SetPedToRagdoll(ped, timeMin, timeMax, ragdollType, p4, p5, p6) end
+---@param abortIfInjured boolean 
+---@param abortIfDead boolean 
+---@param nmTaskMessageParameterName const char 
+function SetPedToRagdoll(ped, timeMin, timeMax, ragdollType, abortIfInjured, abortIfDead, nmTaskMessageParameterName) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -3400,9 +3400,9 @@ function IsThisModelAHorse(model) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param ped number 
+---@param model number | string 
 ---@param toggle boolean 
-function SetPedModelIsSuppressed(ped, toggle) end
+function SetPedModelIsSuppressed(model, toggle) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -5623,8 +5623,8 @@ function RestorePedStamina(ped, stamina) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
-function N_undefined(p0) end
+---@param ped number 
+function N_undefined(ped) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)

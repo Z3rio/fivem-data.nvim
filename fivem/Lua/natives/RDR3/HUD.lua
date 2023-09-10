@@ -519,8 +519,8 @@ function UiPromptHasHoldModeCompleted(prompt) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
-function N_undefined(p0) end
+---@param prompt prompt 
+function UiPromptGetProgress(prompt) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -838,7 +838,7 @@ function UiPromptSetType(prompt, type) end
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
 ---@param prompt prompt 
----@param p1 any 
+---@param p1 boolean 
 function N_undefined(prompt, p1) end
 
 ---This native does not have an official description.

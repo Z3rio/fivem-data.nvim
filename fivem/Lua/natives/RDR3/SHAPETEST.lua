@@ -34,20 +34,20 @@ function StartExpensiveSynchronousShapeTestLosProbe(x1, y1, z1, x2, y2, z2, flag
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param x number 
----@param y number 
----@param z number 
----@param x1 number 
----@param y2 number 
----@param z2 number 
+---@param posX number 
+---@param posY number 
+---@param posZ number 
+---@param dimensionsX number 
+---@param dimensionsY number 
+---@param dimensionsZ number 
 ---@param rotX number 
 ---@param rotY number 
 ---@param rotZ number 
----@param p9 any 
----@param p10 any 
----@param entity any 
----@param p12 any 
-function StartShapeTestBox(x, y, z, x1, y2, z2, rotX, rotY, rotZ, p9, p10, entity, p12) end
+---@param rotationOrder number 
+---@param flags number 
+---@param entityToIgnore number 
+---@param options number 
+function StartShapeTestBox(posX, posY, posZ, dimensionsX, dimensionsY, dimensionsZ, rotX, rotY, rotZ, rotationOrder, flags, entityToIgnore, options) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)

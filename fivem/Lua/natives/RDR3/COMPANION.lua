@@ -52,30 +52,30 @@ function N_undefined(ped, p1) end
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
 ---@param ped number 
 ---@param p1 number 
-function N_undefined(ped, p1) end
+function AddCompanionFlag(ped, p1) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
 ---@param ped number 
 ---@param p1 number 
+function RemoveCompanionFlag(ped, p1) end
+
+---This native does not have an official description.
+---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
+---@param ped number 
+---@param p1 number | string 
 function N_undefined(ped, p1) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
----@param p1 any 
-function N_undefined(p0, p1) end
+---@param groupId number 
+---@param activity number | string 
+function SetCompanionActivity(groupId, activity) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
 ---@param groupId number 
----@param p1 number | string 
-function N_undefined(groupId, p1) end
-
----This native does not have an official description.
----[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
-function N_undefined(p0) end
+function GetCompanionActivity(groupId) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)

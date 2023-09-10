@@ -316,7 +316,7 @@ function GetVolumeBounds(volume, min, max) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
+---@param p0 boolean 
 function N_undefined(p0) end
 
 ---This native does not have an official description.
@@ -450,8 +450,8 @@ function IsVolumeLockRequestValid2(volLockRequestId) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
-function N_undefined(p0) end
+---@param volLockRequestId number 
+function N_undefined(volLockRequestId) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -471,15 +471,15 @@ function N_undefined(p0, p1) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
+---@param volume volume 
 ---@param p1 any 
-function N_undefined(p0, p1) end
+function N_undefined(volume, p1) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
+---@param volume volume 
 ---@param p1 any 
-function N_undefined(p0, p1) end
+function N_undefined(volume, p1) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)

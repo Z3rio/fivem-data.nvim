@@ -9,7 +9,7 @@ function N_undefined(p0, p1) end
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
 ---@param p0 number | string 
----@param p1 number 
+---@param p1 number | string 
 function N_undefined(p0, p1) end
 
 ---This native does not have an official description.

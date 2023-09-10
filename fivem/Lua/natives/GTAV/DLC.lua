@@ -1,6 +1,29 @@
 ---@meta
 
 ---
+---[Native Documentation](https://docs.fivem.net/natives/?_0x8D30F648014A92B5)
+---@return boolean retval 
+function GetExtraContentPackHasBeenInstalled() end
+
+---
+---[Native Documentation](https://docs.fivem.net/natives/?_0x8D30F648014A92B5)
+---@return boolean retval 
+function N_0x8D30F648014A92B5() end
+
+---```
+---Example:
+---DLC::IS_DLC_PRESENT($\mpbusiness2\);
+---($ = gethashkey)
+---bruteforce these:
+---0xB119F6D
+---0x96F02EE6
+---```
+---[Native Documentation](https://docs.fivem.net/natives/?_0x812595A0644CE1DE)
+---@param dlcHash number | string 
+---@return boolean retval 
+function IsDlcPresent(dlcHash) end
+
+---
 ---[Native Documentation](https://docs.fivem.net/natives/?_0x10D0A8F259E93EC9)
 ---@return boolean retval 
 function GetIsLoadingScreenActive() end
@@ -40,42 +63,14 @@ function Nullify(variable, unused) end
 function N_0x241FCA5B1AA14F75() end
 
 ---
----[Native Documentation](https://docs.fivem.net/natives/?_0x8D30F648014A92B5)
----@return boolean retval 
-function GetExtraContentPackHasBeenInstalled() end
-
----
----[Native Documentation](https://docs.fivem.net/natives/?_0x8D30F648014A92B5)
----@return boolean retval 
-function N_0x8D30F648014A92B5() end
-
----```
----Example:
----DLC::IS_DLC_PRESENT($\mpbusiness2\);
----($ = gethashkey)
----bruteforce these:
----0xB119F6D
----0x96F02EE6
----```
----[Native Documentation](https://docs.fivem.net/natives/?_0x812595A0644CE1DE)
----@param dlcHash number | string 
----@return boolean retval 
-function IsDlcPresent(dlcHash) end
+---[Native Documentation](https://docs.fivem.net/natives/?_0xA213B11DFF526300)
+---@return boolean retval Hard-coded to always return 1.
+function N_0xA213B11DFF526300() end
 
 ---
 ---[Native Documentation](https://docs.fivem.net/natives/?_0x9489659372A81585)
 ---@return boolean retval Hard-coded to always return 0.
 function N_0x9489659372A81585() end
-
----
----[Native Documentation](https://docs.fivem.net/natives/?_0xF2E07819EF1A5289)
----@return boolean retval Hard-coded to always return 1.
-function N_0xF2E07819EF1A5289() end
-
----
----[Native Documentation](https://docs.fivem.net/natives/?_0xA213B11DFF526300)
----@return boolean retval Hard-coded to always return 1.
-function N_0xA213B11DFF526300() end
 
 ---GET_IS_LOADING_\*
 ---
@@ -85,6 +80,11 @@ function N_0xA213B11DFF526300() end
 ---[Native Documentation](https://docs.fivem.net/natives/?_0xC4637A6D03C24CC3)
 ---@return boolean retval 
 function N_0xC4637A6D03C24CC3() end
+
+---
+---[Native Documentation](https://docs.fivem.net/natives/?_0xF2E07819EF1A5289)
+---@return boolean retval Hard-coded to always return 1.
+function N_0xF2E07819EF1A5289() end
 
 ---```
 ---This loads the GTA:O dlc map parts (high end garages, apartments).

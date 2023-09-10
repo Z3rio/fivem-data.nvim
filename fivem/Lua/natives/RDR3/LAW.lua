@@ -520,8 +520,8 @@ function N_undefined(crimeType) end
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
 ---@param player number 
----@param p1 any 
-function N_undefined(player, p1) end
+---@param data any 
+function N_undefined(player, data) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)

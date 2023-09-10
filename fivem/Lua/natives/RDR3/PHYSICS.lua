@@ -92,12 +92,12 @@ function GetRopeVertexCount(ropeId) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
----@param p1 any 
----@param p2 any 
----@param p3 any 
----@param p4 any 
-function N_undefined(p0, p1, p2, p3, p4) end
+---@param ropeId number 
+---@param p1 number 
+---@param x number 
+---@param y number 
+---@param z number 
+function N_undefined(ropeId, p1, x, y, z) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -215,7 +215,7 @@ function N_undefined(p0, p1, p2, p3, p4, p5, p6, p7) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
+---@param ropeId number 
 ---@param p1 any 
 ---@param p2 any 
 ---@param p3 any 
@@ -223,7 +223,7 @@ function N_undefined(p0, p1, p2, p3, p4, p5, p6, p7) end
 ---@param p5 any 
 ---@param p6 any 
 ---@param p7 any 
-function N_undefined(p0, p1, p2, p3, p4, p5, p6, p7) end
+function N_undefined(ropeId, p1, p2, p3, p4, p5, p6, p7) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -421,8 +421,8 @@ function N_undefined(ropeId, p1) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
-function N_undefined(p0) end
+---@param ropeId number 
+function RopeGetForcedLength(ropeId) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -450,9 +450,9 @@ function N_undefined(p0, p1, p2) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
----@param p1 any 
-function N_undefined(p0, p1) end
+---@param ropeId number 
+---@param p1 number 
+function N_undefined(ropeId, p1) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)

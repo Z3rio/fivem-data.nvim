@@ -1,44 +1,5 @@
 ---@meta
 
----
----[Native Documentation](https://docs.fivem.net/natives/?_0x36DD3FE58B5E5212)
----@param x number 
----@param y number 
----@param z number 
----@param explosionType number See [`ADD_EXPLOSION`](#\_0xE3AD2BDBAEE269AC).
----@param explosionFx number | string 
----@param damageScale number 
----@param isAudible boolean If explosion makes a sound.
----@param isInvisible boolean If the explosion is invisible or not.
----@param cameraShake number 
-function AddExplosionWithUserVfx(x, y, z, explosionType, explosionFx, damageScale, isAudible, isInvisible, cameraShake) end
-
----
----[Native Documentation](https://docs.fivem.net/natives/?_0x36DD3FE58B5E5212)
----@param x number 
----@param y number 
----@param z number 
----@param explosionType number See [`ADD_EXPLOSION`](#\_0xE3AD2BDBAEE269AC).
----@param explosionFx number | string 
----@param damageScale number 
----@param isAudible boolean If explosion makes a sound.
----@param isInvisible boolean If the explosion is invisible or not.
----@param cameraShake number 
-function AddSpecfxExplosion(x, y, z, explosionType, explosionFx, damageScale, isAudible, isInvisible, cameraShake) end
-
----
----[Native Documentation](https://docs.fivem.net/natives/?_0x172AA1B624FA1013)
----@param ped number 
----@param x number 
----@param y number 
----@param z number 
----@param explosionType number See [`ADD_EXPLOSION`](#\_0xE3AD2BDBAEE269AC).
----@param damageScale number 
----@param isAudible boolean If explosion makes a sound.
----@param isInvisible boolean If the explosion is invisible or not.
----@param cameraShake number 
-function AddOwnedExplosion(ped, x, y, z, explosionType, damageScale, isAudible, isInvisible, cameraShake) end
-
 ---```
 ---NativeDB Added Parameter 9: BOOL noDamage
 ---```
@@ -149,6 +110,45 @@ function AddOwnedExplosion(ped, x, y, z, explosionType, damageScale, isAudible, 
 ---@param cameraShake number 
 function AddExplosion(x, y, z, explosionType, damageScale, isAudible, isInvisible, cameraShake) end
 
+---
+---[Native Documentation](https://docs.fivem.net/natives/?_0x36DD3FE58B5E5212)
+---@param x number 
+---@param y number 
+---@param z number 
+---@param explosionType number See [`ADD_EXPLOSION`](#\_0xE3AD2BDBAEE269AC).
+---@param explosionFx number | string 
+---@param damageScale number 
+---@param isAudible boolean If explosion makes a sound.
+---@param isInvisible boolean If the explosion is invisible or not.
+---@param cameraShake number 
+function AddExplosionWithUserVfx(x, y, z, explosionType, explosionFx, damageScale, isAudible, isInvisible, cameraShake) end
+
+---
+---[Native Documentation](https://docs.fivem.net/natives/?_0x36DD3FE58B5E5212)
+---@param x number 
+---@param y number 
+---@param z number 
+---@param explosionType number See [`ADD_EXPLOSION`](#\_0xE3AD2BDBAEE269AC).
+---@param explosionFx number | string 
+---@param damageScale number 
+---@param isAudible boolean If explosion makes a sound.
+---@param isInvisible boolean If the explosion is invisible or not.
+---@param cameraShake number 
+function AddSpecfxExplosion(x, y, z, explosionType, explosionFx, damageScale, isAudible, isInvisible, cameraShake) end
+
+---
+---[Native Documentation](https://docs.fivem.net/natives/?_0x172AA1B624FA1013)
+---@param ped number 
+---@param x number 
+---@param y number 
+---@param z number 
+---@param explosionType number See [`ADD_EXPLOSION`](#\_0xE3AD2BDBAEE269AC).
+---@param damageScale number 
+---@param isAudible boolean If explosion makes a sound.
+---@param isInvisible boolean If the explosion is invisible or not.
+---@param cameraShake number 
+function AddOwnedExplosion(ped, x, y, z, explosionType, damageScale, isAudible, isInvisible, cameraShake) end
+
 ---```
 ---Returns a handle to the first entity within the a circle spawned inside the 2 points from a radius.
 ---```
@@ -203,6 +203,21 @@ function GetClosestFirePos(outPosition, x, y, z) end
 function GetEntityInsideExplosionSphere(explosionType, x, y, z, radius) end
 
 ---
+---[Native Documentation](https://docs.fivem.net/natives/?_0x50CAD495A460B305)
+---@param x number 
+---@param y number 
+---@param z number 
+---@param radius number 
+---@return number retval 
+function GetNumberOfFiresInRange(x, y, z, radius) end
+
+---
+---[Native Documentation](https://docs.fivem.net/natives/?_0x28D3FED7190D3A0B)
+---@param entity number 
+---@return boolean retval 
+function IsEntityOnFire(entity) end
+
+---
 ---[Native Documentation](https://docs.fivem.net/natives/?_0x6070104B699B2EF4)
 ---@param explosionType number See [`ADD_EXPLOSION`](#\_0xE3AD2BDBAEE269AC).
 ---@param x1 number 
@@ -226,54 +241,6 @@ function IsExplosionActiveInArea(explosionType, x1, y1, z1, x2, y2, z2) end
 ---@return boolean retval 
 function N_0x6070104B699B2EF4(explosionType, x1, y1, z1, x2, y2, z2) end
 
----
----[Native Documentation](https://docs.fivem.net/natives/?_0x2E2EBA0EE7CED0E0)
----@param explosionType number See [`ADD_EXPLOSION`](#\_0xE3AD2BDBAEE269AC).
----@param x1 number 
----@param y1 number 
----@param z1 number 
----@param x2 number 
----@param y2 number 
----@param z2 number 
----@return boolean retval 
-function IsExplosionInArea(explosionType, x1, y1, z1, x2, y2, z2) end
-
----
----[Native Documentation](https://docs.fivem.net/natives/?_0x50CAD495A460B305)
----@param x number 
----@param y number 
----@param z number 
----@param radius number 
----@return number retval 
-function GetNumberOfFiresInRange(x, y, z, radius) end
-
----
----[Native Documentation](https://docs.fivem.net/natives/?_0xAB0F816885B0E483)
----@param explosionType number See [`ADD_EXPLOSION`](#\_0xE3AD2BDBAEE269AC).
----@param x number 
----@param y number 
----@param z number 
----@param radius number 
----@return boolean retval 
-function IsExplosionInSphere(explosionType, x, y, z, radius) end
-
----
----[Native Documentation](https://docs.fivem.net/natives/?_0x7FF548385680673F)
----@param fireHandle fireid 
-function RemoveScriptFire(fireHandle) end
-
----
----[Native Documentation](https://docs.fivem.net/natives/?_0x28D3FED7190D3A0B)
----@param entity number 
----@return boolean retval 
-function IsEntityOnFire(entity) end
-
----
----[Native Documentation](https://docs.fivem.net/natives/?_0xF6A9D9708F6F23DF)
----@param entity number 
----@return fireid retval 
-function StartEntityFire(entity) end
-
 ---See [`IS_POINT_IN_ANGLED_AREA`](#\_0x2A70BAE8883E4C81) for the definition of an angled area.
 ---[Native Documentation](https://docs.fivem.net/natives/?_0xA079A6C51525DC4B)
 ---@param explosionType number explosion enum, -1 for any explosion type. See [ADD_EXPLOSION](#\_0xE3AD2BDBAEE269AC).
@@ -287,6 +254,28 @@ function StartEntityFire(entity) end
 ---@return boolean retval 
 function IsExplosionInAngledArea(explosionType, x1, y1, z1, x2, y2, z2, width) end
 
+---
+---[Native Documentation](https://docs.fivem.net/natives/?_0xAB0F816885B0E483)
+---@param explosionType number See [`ADD_EXPLOSION`](#\_0xE3AD2BDBAEE269AC).
+---@param x number 
+---@param y number 
+---@param z number 
+---@param radius number 
+---@return boolean retval 
+function IsExplosionInSphere(explosionType, x, y, z, radius) end
+
+---
+---[Native Documentation](https://docs.fivem.net/natives/?_0x2E2EBA0EE7CED0E0)
+---@param explosionType number See [`ADD_EXPLOSION`](#\_0xE3AD2BDBAEE269AC).
+---@param x1 number 
+---@param y1 number 
+---@param z1 number 
+---@param x2 number 
+---@param y2 number 
+---@param z2 number 
+---@return boolean retval 
+function IsExplosionInArea(explosionType, x1, y1, z1, x2, y2, z2) end
+
 ---SET_FIRE_\*
 ---
 ---```
@@ -295,6 +284,11 @@ function IsExplosionInAngledArea(explosionType, x1, y1, z1, x2, y2, z2, width) e
 ---[Native Documentation](https://docs.fivem.net/natives/?_0x8F390AC4155099BA)
 ---@param p0 number 
 function SetFireSpreadRate(p0) end
+
+---
+---[Native Documentation](https://docs.fivem.net/natives/?_0x7FF548385680673F)
+---@param fireHandle fireid 
+function RemoveScriptFire(fireHandle) end
 
 ---```
 ---Starts a fire:  
@@ -318,6 +312,12 @@ function StartScriptFire(X, Y, Z, maxChildren, isGasFire) end
 ---@param z number 
 ---@param radius number 
 function StopFireInRange(x, y, z, radius) end
+
+---
+---[Native Documentation](https://docs.fivem.net/natives/?_0xF6A9D9708F6F23DF)
+---@param entity number 
+---@return fireid retval 
+function StartEntityFire(entity) end
 
 ---
 ---[Native Documentation](https://docs.fivem.net/natives/?_0x7F0DD2EBBB651AFF)

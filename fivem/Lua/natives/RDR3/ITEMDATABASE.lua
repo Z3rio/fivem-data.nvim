@@ -4,8 +4,8 @@
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
 ---@param p0 any 
 ---@param p1 any 
----@param p2 any 
-function ItemdatabaseCanEquipItemOnCategory(p0, p1, p2) end
+---@param slotId number | string 
+function ItemdatabaseCanEquipItemOnCategory(p0, p1, slotId) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -124,28 +124,28 @@ function ItemdatabaseFilloutItem(p0, costShop, fillOutIndex, p3) end
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
 ---@param p0 any 
-function N_undefined(p0) end
+function ItemdatabaseGetAwardAcquireCostType(p0) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
 ---@param p0 any 
----@param p1 any 
----@param p2 any 
-function N_undefined(p0, p1, p2) end
+---@param index number 
+---@param data any 
+function N_undefined(p0, index, data) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
----@param p1 any 
-function N_undefined(p0, p1) end
+---@param award any 
+---@param cost number | string 
+function N_undefined(award, cost) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
----@param p1 any 
----@param p2 any 
+---@param award any 
+---@param cost number | string 
+---@param index number 
 ---@param p3 any 
-function N_undefined(p0, p1, p2, p3) end
+function N_undefined(award, cost, index, p3) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -157,7 +157,7 @@ function ItemdatabaseCreateItemCollection(p0, size, comparisonType) end
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
 ---@param collectionId number 
-function N_undefined(collectionId) end
+function ItemdatabaseGetCollectionSize(collectionId) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -220,17 +220,17 @@ function ItemdatabaseIsBundleValid(p0, p1) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
+---@param bundle any 
 ---@param p1 any 
-function N_undefined(p0, p1) end
+function N_undefined(bundle, p1) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
+---@param bundle any 
 ---@param p1 any 
----@param p2 any 
+---@param index number 
 ---@param p3 any 
-function N_undefined(p0, p1, p2, p3) end
+function N_undefined(bundle, p1, index, p3) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -464,7 +464,7 @@ function N_undefined(award, p1, p2) end
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
 ---@param p0 any 
 ---@param p1 any 
-function N_undefined(p0, p1) end
+function ItemdatabaseGetAwardCostModifiers(p0, p1) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)

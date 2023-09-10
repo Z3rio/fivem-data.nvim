@@ -115,8 +115,8 @@ function FreeMemoryForLowQualityPhoto() end
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
 ---@param p0 boolean 
----@param p1 boolean 
-function DrawLowQualityPhotoToPhone(p0, p1) end
+---@param photoRotation number 
+function DrawLowQualityPhotoToPhone(p0, photoRotation) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -1688,14 +1688,14 @@ function SetEntityMaskLayers(entity, layer0, layer1, layer2, layer3) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
----@param p1 any 
----@param p2 any 
-function N_undefined(p0, p1, p2) end
+---@param p0 number 
+---@param p1 number 
+---@param p2 number 
+function SetEntityAura(p0, p1, p2) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
-function N_undefined() end
+function ResetEntityAura() end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)

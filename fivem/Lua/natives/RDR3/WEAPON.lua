@@ -268,7 +268,7 @@ function SetForceCurrentWeaponIntoCockedState(ped, attachPoint) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
+---@param p0 boolean 
 function N_undefined(p0) end
 
 ---This native does not have an official description.
@@ -1350,8 +1350,8 @@ function GetPlayerPedQuickSwapWeaponByGuid(ped, guidPrimary, guidSecondary) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
-function N_undefined(p0) end
+---@param ped number 
+function N_undefined(ped) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)

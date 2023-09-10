@@ -40,9 +40,9 @@ function TaskCower(ped, duration, pedToCowerFrom, p3) end
 ---@param ped number 
 ---@param duration number 
 ---@param facingPed number 
----@param p3 number 
----@param p4 boolean 
-function TaskHandsUp(ped, duration, facingPed, p3, p4) end
+---@param timeToFacePed number 
+---@param flags number 
+function TaskHandsUp(ped, duration, facingPed, timeToFacePed, flags) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -1289,11 +1289,11 @@ function TaskEvasiveAnim(ped1, ped2, p2) end
 ---@param x number 
 ---@param y number 
 ---@param z number 
----@param p4 any 
----@param p5 any 
----@param p6 any 
----@param p7 any 
-function TaskLookAtCoord(ped, x, y, z, p4, p5, p6, p7) end
+---@param duration number 
+---@param flags number 
+---@param p6 number 
+---@param p7 boolean 
+function TaskLookAtCoord(ped, x, y, z, duration, flags, p6, p7) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -1357,8 +1357,8 @@ function ClearSequenceTask(taskSequenceId) end
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
 ---@param taskSequenceId number 
----@param repeat boolean 
-function SetSequenceToRepeat(taskSequenceId, repeat) end
+---@param repeatMode number 
+function SetSequenceToRepeat(taskSequenceId, repeatMode) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -1577,12 +1577,12 @@ function TaskGotoEntityOffset(ped, entity, p2, x, y, z, duration) end
 ---@param ped number 
 ---@param entity number 
 ---@param duration number 
----@param p3 number 
----@param p4 number 
----@param p5 number 
----@param p6 number 
----@param p7 boolean 
-function TaskGotoEntityOffsetXy(ped, entity, duration, p3, p4, p5, p6, p7) end
+---@param targetRadius number 
+---@param xOffset number 
+---@param yOffset number 
+---@param moveBlendRatio number 
+---@param offsetFlags number 
+function TaskGotoEntityOffsetXy(ped, entity, duration, targetRadius, xOffset, yOffset, moveBlendRatio, offsetFlags) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -1908,9 +1908,9 @@ function TaskClimb2(ped, heading) end
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
 ---@param ped number 
----@param p1 any 
----@param p2 any 
----@param p3 any 
+---@param p1 number 
+---@param p2 boolean 
+---@param p3 boolean 
 function TaskClimbLadder(ped, p1, p2, p3) end
 
 ---This native does not have an official description.
@@ -2077,21 +2077,21 @@ function TaskCombatPed3(p0, p1, p2, p3, p4, p5) end
 ---@param x number 
 ---@param y number 
 ---@param z number 
----@param p4 any 
+---@param duration number 
 ---@param p5 any 
 ---@param p6 any 
 ---@param p7 any 
-function TaskSeekCoverFromPos(ped, x, y, z, p4, p5, p6, p7) end
+function TaskSeekCoverFromPos(ped, x, y, z, duration, p5, p6, p7) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
 ---@param ped number 
----@param p1 any 
----@param p2 any 
+---@param fromPed number 
+---@param duration number 
 ---@param p3 any 
 ---@param p4 any 
 ---@param p5 any 
-function TaskSeekCoverFromPed(ped, p1, p2, p3, p4, p5) end
+function TaskSeekCoverFromPed(ped, fromPed, duration, p3, p4, p5) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -2724,8 +2724,8 @@ function TaskUseNearestScenarioChainToCoordWarp(ped, x, y, z, distance, p5, p6, 
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
-function N_undefined(p0) end
+---@param ped number 
+function N_undefined(ped) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -3171,9 +3171,9 @@ function TaskCombatHatedTargetsAroundPed(ped, radius, flags, p3) end
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
 ---@param ped number 
 ---@param radius number 
----@param p2 number 
----@param p3 any 
-function TaskCombatHatedTargetsAroundPedTimed(ped, radius, p2, p3) end
+---@param time number 
+---@param flags number 
+function TaskCombatHatedTargetsAroundPedTimed(ped, radius, time, flags) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -3301,23 +3301,23 @@ function ClosePatrolRoute() end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
----@param p1 any 
----@param p2 any 
----@param p3 any 
----@param p4 any 
----@param p5 any 
----@param p6 any 
----@param p7 any 
----@param p8 any 
----@param p9 any 
-function AddPatrolRouteNode(p0, p1, p2, p3, p4, p5, p6, p7, p8, p9) end
+---@param nodeId number 
+---@param scenarioName const char 
+---@param x number 
+---@param y number 
+---@param z number 
+---@param lookPosX number 
+---@param lookPosY number 
+---@param lookPosZ number 
+---@param duration number 
+---@param p9 boolean 
+function AddPatrolRouteNode(nodeId, scenarioName, x, y, z, lookPosX, lookPosY, lookPosZ, duration, p9) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
----@param p1 any 
-function AddPatrolRouteLink(p0, p1) end
+---@param node1 number 
+---@param node2 number 
+function AddPatrolRouteLink(node1, node2) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -4130,23 +4130,23 @@ function N_undefined(p0, p1) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param ped number 
-function IsMoveBlendRatioStill(ped) end
+---@param moveBlendRatio number 
+function IsMoveBlendRatioStill(moveBlendRatio) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param ped number 
-function IsMoveBlendRatioWalking(ped) end
+---@param moveBlendRatio number 
+function IsMoveBlendRatioWalking(moveBlendRatio) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param ped number 
-function IsMoveBlendRatioRunning(ped) end
+---@param moveBlendRatio number 
+function IsMoveBlendRatioRunning(moveBlendRatio) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param ped number 
-function IsMoveBlendRatioSprinting(ped) end
+---@param moveBlendRatio number 
+function IsMoveBlendRatioSprinting(moveBlendRatio) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)

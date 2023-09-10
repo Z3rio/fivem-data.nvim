@@ -241,8 +241,8 @@ function GetNumberOfEvents(eventGroup) end
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
 ---@param eventGroup number 
----@param eventIndex number 
-function GetEventExists(eventGroup, eventIndex) end
+---@param eventType number | string 
+function GetEventExists(eventGroup, eventType) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)

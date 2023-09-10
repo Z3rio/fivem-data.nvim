@@ -201,8 +201,8 @@ function EventGetRecentEvent(entity, p1, p2) end
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
 ---@param eventName const char 
----@param eventType number | string 
-function N_undefined(eventName, eventType) end
+---@param shockingEvent number | string 
+function IsEventTrackerActive(eventName, shockingEvent) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)

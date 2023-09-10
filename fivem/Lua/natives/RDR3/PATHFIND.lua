@@ -2,16 +2,16 @@
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
----@param p1 any 
----@param p2 any 
----@param p3 any 
----@param p4 any 
----@param p5 any 
+---@param xMin number 
+---@param yMin number 
+---@param zMin number 
+---@param xMax number 
+---@param yMax number 
+---@param zMax number 
 ---@param p6 any 
 ---@param p7 any 
 ---@param p8 any 
-function SetRoadsInArea(p0, p1, p2, p3, p4, p5, p6, p7, p8) end
+function SetRoadsInArea(xMin, yMin, zMin, xMax, yMax, zMax, p6, p7, p8) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -44,15 +44,15 @@ function ResetRoadsInVolume(volume, p1) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
----@param p1 any 
----@param p2 any 
----@param p3 any 
----@param p4 any 
----@param p5 any 
+---@param xMin number 
+---@param yMin number 
+---@param zMin number 
+---@param xMax number 
+---@param yMax number 
+---@param zMax number 
 ---@param p6 any 
 ---@param p7 any 
-function SetRoadsBackToOriginal(p0, p1, p2, p3, p4, p5, p6, p7) end
+function SetRoadsBackToOriginal(xMin, yMin, zMin, xMax, yMax, zMax, p6, p7) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -69,15 +69,15 @@ function SetRoadsBackToOriginalInAngledArea(p0, p1, p2, p3, p4, p5, p6, p7, p8) 
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
----@param p1 any 
----@param p2 any 
----@param p3 any 
----@param p4 any 
----@param p5 any 
----@param p6 any 
+---@param xMin number 
+---@param yMin number 
+---@param zMin number 
+---@param xMax number 
+---@param yMax number 
+---@param zMax number 
+---@param p6 number 
 ---@param p7 any 
-function N_undefined(p0, p1, p2, p3, p4, p5, p6, p7) end
+function N_undefined(xMin, yMin, zMin, xMax, yMax, zMax, p6, p7) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -102,15 +102,15 @@ function N_undefined(p0, p1, p2) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
----@param p1 any 
----@param p2 any 
----@param p3 any 
----@param p4 any 
----@param p5 any 
+---@param xMin number 
+---@param yMin number 
+---@param zMin number 
+---@param xMax number 
+---@param yMax number 
+---@param zMax number 
 ---@param p6 any 
 ---@param p7 any 
-function N_undefined(p0, p1, p2, p3, p4, p5, p6, p7) end
+function N_undefined(xMin, yMin, zMin, xMax, yMax, zMax, p6, p7) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -196,12 +196,12 @@ function GetNthClosestVehicleNodeWithHeading(x, y, z, nthClosest, outPosition, h
 ---@param y number 
 ---@param z number 
 ---@param nthClosest number 
----@param outPosition vector3 
----@param outHeading number 
----@param p6 any 
----@param p7 number 
----@param p8 number 
-function GetNthClosestVehicleNodeIdWithHeading(x, y, z, nthClosest, outPosition, outHeading, p6, p7, p8) end
+---@param returnHeading number 
+---@param returnNumLanes number 
+---@param nodeFlags number 
+---@param zMeasureMult number 
+---@param zTolerance number 
+function GetNthClosestVehicleNodeIdWithHeading(x, y, z, nthClosest, returnHeading, returnNumLanes, nodeFlags, zMeasureMult, zTolerance) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -272,12 +272,12 @@ function RequestPathNodesInAreaThisFrame(x1, y1, x2, y2) end
 ---@param y number 
 ---@param z number 
 ---@param radius number 
----@param p4 boolean 
----@param p5 boolean 
----@param p6 boolean 
+---@param minLanes number 
+---@param avoidDeadEnds boolean 
+---@param avoidHighways boolean 
 ---@param outPosition vector3 
 ---@param nodeId number 
-function GetRandomVehicleNode(x, y, z, radius, p4, p5, p6, outPosition, nodeId) end
+function GetRandomVehicleNode(x, y, z, radius, minLanes, avoidDeadEnds, avoidHighways, outPosition, nodeId) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)

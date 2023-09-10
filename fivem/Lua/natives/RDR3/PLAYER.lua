@@ -1101,13 +1101,13 @@ function SetPlayerStatFlagHash(player, p1) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
----@param p1 any 
----@param p2 any 
----@param p3 any 
----@param p4 any 
----@param p5 any 
-function N_undefined(p0, p1, p2, p3, p4, p5) end
+---@param health number 
+---@param stamina number 
+---@param deadeye number 
+---@param healthCore number 
+---@param staminaCore number 
+---@param deadeyeCore number 
+function SetUsedItemEffect(health, stamina, deadeye, healthCore, staminaCore, deadeyeCore) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)

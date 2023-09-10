@@ -1,20 +1,6 @@
 ---@meta
 
 ---```
----Same return values as GET_CURRENT_LANGUAGE
----```
----[Native Documentation](https://docs.fivem.net/natives/?_0x497420E022796B3F)
----@return number retval 
-function LocalizationGetSystemLanguage() end
-
----```
----Same return values as GET_CURRENT_LANGUAGE
----```
----[Native Documentation](https://docs.fivem.net/natives/?_0x497420E022796B3F)
----@return number retval 
-function N_0x497420E022796B3F() end
-
----```
 ---0 = american (en-US)
 ---1 = french (fr-FR)
 ---2 = german (de-DE)
@@ -84,4 +70,18 @@ function LocalizationGetSystemDateFormat() end
 ---[Native Documentation](https://docs.fivem.net/natives/?_0xA8AE43AEC1A61314)
 ---@return number retval 
 function GetUserLanguageId() end
+
+---```
+---Same return values as GET_CURRENT_LANGUAGE
+---```
+---[Native Documentation](https://docs.fivem.net/natives/?_0x497420E022796B3F)
+---@return number retval 
+function LocalizationGetSystemLanguage() end
+
+---```
+---Same return values as GET_CURRENT_LANGUAGE
+---```
+---[Native Documentation](https://docs.fivem.net/natives/?_0x497420E022796B3F)
+---@return number retval 
+function N_0x497420E022796B3F() end
 

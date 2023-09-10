@@ -287,8 +287,8 @@ function StatstrackerDeedStarted(p0, p1) end
 ---@param deedType number 
 ---@param deedHash number | string 
 ---@param missionStatus number 
----@param p3 any 
-function N_undefined(deedType, deedHash, missionStatus, p3) end
+---@param data any 
+function StatstrackerDeedStatus(deedType, deedHash, missionStatus, data) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)

@@ -345,9 +345,9 @@ function StopCamShaking(cam, p1) end
 ---@param xRot number 
 ---@param yRot number 
 ---@param zRot number 
----@param p9 boolean 
----@param p10 number 
-function PlayCamAnim(cam, animName, animDictionary, x, y, z, xRot, yRot, zRot, p9, p10) end
+---@param animFlags number 
+---@param rotOrder number 
+function PlayCamAnim(cam, animName, animDictionary, x, y, z, xRot, yRot, zRot, animFlags, rotOrder) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -522,7 +522,7 @@ function StopGameplayCamShaking(p0) end
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
 ---@param shakeName const char 
 ---@param p1 boolean 
-function N_undefined(shakeName, p1) end
+function StopGameplayCamShakingWithName(shakeName, p1) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -765,8 +765,8 @@ function GetFinalRenderedCamFov() end
 ---@param duration number 
 ---@param blendOutDuration number 
 ---@param blendInDuration number 
----@param unk number 
-function SetGameplayCoordHint(x, y, z, duration, blendOutDuration, blendInDuration, unk) end
+---@param p6 number | string 
+function SetGameplayCoordHint(x, y, z, duration, blendOutDuration, blendInDuration, p6) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -1021,8 +1021,8 @@ function N_undefined() end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
-function N_undefined(p0) end
+---@param toggle boolean 
+function N_undefined(toggle) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -1097,12 +1097,12 @@ function UnloadCinematicCameraLocation(dictionaryName) end
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
 ---@param sLocationDictName const char 
-function N_undefined(sLocationDictName) end
+function IsCinematicCamLocationLoaded(sLocationDictName) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
 ---@param locationDictName const char 
-function N_undefined(locationDictName) end
+function IsCinematicCamLocationLoaded2(locationDictName) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -1195,8 +1195,8 @@ function IsCamDataDictLoaded(cameraDictionary) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
-function N_undefined(p0) end
+---@param cameraDictionary const char 
+function N_undefined(cameraDictionary) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)

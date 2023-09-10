@@ -612,15 +612,15 @@ function SetFadeInAfterLoad(toggle) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 boolean 
----@param p1 number 
----@param p2 number 
----@param p3 number 
----@param p4 number 
----@param p5 boolean 
----@param p6 number 
----@param p7 number 
-function OverrideSaveHouse(p0, p1, p2, p3, p4, p5, p6, p7) end
+---@param override boolean 
+---@param x number 
+---@param y number 
+---@param z number 
+---@param heading number 
+---@param isAutosave boolean 
+---@param returnCoords vector3 
+---@param returnHeading number 
+function OverrideSaveHouse(override, x, y, z, heading, isAutosave, returnCoords, returnHeading) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -718,15 +718,15 @@ function IsProjectileInArea(x1, y1, z1, x2, y2, z2, ownedByPlayer) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param x1 number 
----@param y1 number 
----@param z1 number 
----@param x2 number 
----@param y2 number 
----@param z2 number 
----@param type number 
----@param p7 boolean 
-function IsProjectileTypeInArea(x1, y1, z1, x2, y2, z2, type, p7) end
+---@param xMin number 
+---@param yMin number 
+---@param zMin number 
+---@param xMax number 
+---@param yMax number 
+---@param zMax number 
+---@param weaponType number | string 
+---@param isPlayer boolean 
+function IsProjectileTypeInArea(xMin, yMin, zMin, xMax, yMax, zMax, weaponType, isPlayer) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -1475,7 +1475,17 @@ function N_undefined(p0, p1) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
+---@param p0 number 
+function N_undefined(p0) end
+
+---This native does not have an official description.
+---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
+---@param data any 
+function N_undefined(data) end
+
+---This native does not have an official description.
+---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
+---@param p0 number | string 
 function N_undefined(p0) end
 
 ---This native does not have an official description.
@@ -1490,17 +1500,7 @@ function N_undefined(p0) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
-function N_undefined(p0) end
-
----This native does not have an official description.
----[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
-function N_undefined(p0) end
-
----This native does not have an official description.
----[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
+---@param p0 number | string 
 function N_undefined(p0) end
 
 ---This native does not have an official description.

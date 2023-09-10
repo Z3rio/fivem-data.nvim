@@ -910,11 +910,11 @@ function N_undefined(p0, p1) end
 ---@param x number 
 ---@param y number 
 ---@param z number 
----@param p5 boolean 
+---@param component number 
 ---@param isDirectionRel boolean 
 ---@param isForceRel boolean 
 ---@param p8 boolean 
-function ApplyForceToEntityCenterOfMass(entity, forceType, x, y, z, p5, isDirectionRel, isForceRel, p8) end
+function ApplyForceToEntityCenterOfMass(entity, forceType, x, y, z, component, isDirectionRel, isForceRel, p8) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)

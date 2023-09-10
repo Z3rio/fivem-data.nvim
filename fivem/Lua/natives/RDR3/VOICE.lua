@@ -6,8 +6,8 @@ function N_undefined() end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 boolean 
-function N_undefined(p0) end
+---@param enabled boolean 
+function N_undefined(enabled) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
@@ -67,8 +67,8 @@ function N_undefined(threshold) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 number 
-function N_undefined(p0) end
+---@param flag boolean 
+function N_undefined(flag) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)

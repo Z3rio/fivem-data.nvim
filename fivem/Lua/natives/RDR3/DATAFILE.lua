@@ -58,13 +58,13 @@ function DatafileGetFileDict(index) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
-function DatadictIsDictValid(p0) end
+---@param fileDict any 
+function DatadictIsDictValid(fileDict) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
----@param p0 any 
-function DatadictIsArrayValid(p0) end
+---@param fileDict any 
+function DatadictIsArrayValid(fileDict) end
 
 ---This native does not have an official description.
 ---[Native Documentation](https://alloc8or.re/rdr3/nativedb/?n=undefined)
