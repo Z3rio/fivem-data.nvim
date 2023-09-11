@@ -2,9 +2,7 @@
 node_modules
 
 # build
-library
-dist
-Lua
+Lua/natives
 
 # lock files
 package-lock.json
