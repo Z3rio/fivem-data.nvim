@@ -21,13 +21,22 @@ function lua54(toggle) end
 ---@param files string[]
 function escrow_ignore(files) end
 
----@param files string[]
+---@param file string[] | string
+function shared_script(file) end
+
+---@param file string[] | string
+function client_script(file) end
+
+---@param file string[] | string
+function server_script(file) end
+
+---@param files string[] | string
 function shared_scripts(files) end
 
----@param files string[]
+---@param files string[] | string
 function client_scripts(files) end
 
----@param files string[]
+---@param files string[] | string
 function server_scripts(files) end
 
 ---@param files string[]
