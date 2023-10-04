@@ -3,7 +3,7 @@
 ---@class QBClientFunctions
 local Functions = {}
 
----@param cb function
+---@param cb? function
 ---@return QBPlayerData
 function Functions.GetPlayerData(cb) end
 
@@ -50,8 +50,8 @@ function Functions.LoadModel(model) end
 function Functions.LoadAnimSet(animSet) end
 
 ---@param text string
----@param texttype string
----@param length number
+---@param texttype? string
+---@param length? number
 function Functions.Notify(text, texttype, length) end
 
 ---@param name string

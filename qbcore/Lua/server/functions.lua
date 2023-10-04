@@ -283,8 +283,8 @@ function Functions.HasItem(source, items, amount) end
 
 ---@param source number
 ---@param text string
----@param type string
----@param length number
+---@param type? string
+---@param length? number
 function Functions.Notify(source, text, type, length) end
 
 ---???? ... ok
