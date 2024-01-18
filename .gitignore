@@ -1,10 +1,6 @@
 # modules
 node_modules
 
-# build
-Lua/natives
-
 # lock files
 package-lock.json
 yarn.lock
-pnpm-lock.yaml

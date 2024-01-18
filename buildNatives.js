@@ -6,23 +6,23 @@ const path = require("node:path");
 (async () => {
   // clean up
   const folderNames = ["CFX-NATIVE", "GTAV", "RDR3"];
-  if (fs.existsSync("./Lua") == false) {
-    fs.mkdirSync("./Lua");
+  if (fs.existsSync("./fivem/Lua") == false) {
+    fs.mkdirSync("./fivem/Lua");
   }
 
-  if (fs.existsSync("./Lua/natives") == false) {
-    fs.mkdirSync("./Lua/natives");
+  if (fs.existsSync("./fivem/Lua/natives") == false) {
+    fs.mkdirSync("./fivem/Lua/natives");
   }
 
   for (const folderName of folderNames) {
-    if (fs.existsSync(`./Lua/natives/${folderName}`)) {
-      for (const file of fs.readdirSync(`./Lua/natives/${folderName}`)) {
+    if (fs.existsSync(`./fivem/Lua/natives/${folderName}`)) {
+      for (const file of fs.readdirSync(`./fivem/Lua/natives/${folderName}`)) {
         if (file.endsWith(".lua")) {
-          fs.unlinkSync(path.join(`./Lua/natives/${folderName}`, file));
+          fs.unlinkSync(path.join(`./fivem/Lua/natives/${folderName}`, file));
         }
       }
     } else {
-      fs.mkdirSync(`./Lua/natives/${folderName}`);
+      fs.mkdirSync(`./fivem/Lua/natives/${folderName}`);
     }
   }
 
@@ -34,21 +34,21 @@ const path = require("node:path");
 
 async function buildCFX() {
   const { data } = await axios.get(
-    "https://runtime.fivem.net/doc/natives_cfx.json",
+    "https://runtime.fivem.net/doc/natives_cfx.json"
   );
 
   nativesToFile(
     "CFX-NATIVE",
     "CFX",
     "https://docs.fivem.net/natives/?_",
-    Object.values(data.CFX),
+    Object.values(data.CFX)
   );
 }
 
 async function buildFiveM() {
   // GTA Specific Natives
   const { data } = await axios.get(
-    "https://runtime.fivem.net/doc/natives.json",
+    "https://runtime.fivem.net/doc/natives.json"
   );
 
   for (const [categoryName, categoryNatives] of Object.entries(data)) {
@@ -56,7 +56,7 @@ async function buildFiveM() {
       "GTAV",
       categoryName,
       "https://docs.fivem.net/natives/?_",
-      Object.values(categoryNatives),
+      Object.values(categoryNatives)
     );
   }
 }
@@ -64,7 +64,7 @@ async function buildFiveM() {
 async function buildRedM() {
   // RDR Specific Natives
   const { data } = await axios.get(
-    "https://alloc8or.re/rdr3/nativedb/static/natives.json",
+    "https://alloc8or.re/rdr3/nativedb/static/natives.json"
   );
 
   for (const [categoryName, categoryNatives] of Object.entries(data)) {
@@ -72,7 +72,7 @@ async function buildRedM() {
       "RDR3",
       categoryName,
       "https://alloc8or.re/rdr3/nativedb/?n=",
-      Object.values(categoryNatives),
+      Object.values(categoryNatives)
     );
   }
 }
@@ -85,7 +85,7 @@ function toNative({
   examples = [],
   description = "This native does not have an official description.",
   repoBaseUrl,
-  resultsDescription = "",
+  resultsDescription = ""
 }) {
   let native = ``;
 
@@ -96,7 +96,7 @@ function toNative({
   native += `---[Native Documentation](${repoBaseUrl}${hash})\n`;
 
   for (const example of Object.values(
-    examples.filter((e) => e.lang === "lua"),
+    examples.filter((e) => e.lang === "lua")
   )) {
     native += `---Example: \n---\`\`\`${example.code
       .split("\n")
@@ -169,15 +169,21 @@ function toLuaType(type) {
 function nativesToFile(folderName, fileName, repoBaseUrl, natives) {
   appendToFile(folderName, fileName, "---@meta\n\n");
 
-  for (const { name, ...native } of Object.values(natives)) {
+  const values = Object.values(natives);
+  const len = values.length;
+  let counter = 0;
+  for (const { name, ...native } of values) {
+    counter++;
     const parsedNative = toNative({ repoBaseUrl, name, ...native });
     appendToFile(folderName, fileName, parsedNative);
+
+    console.log(`building native ${name}, ${counter}/${len}`);
 
     for (const alias of native.aliases || []) {
       const parsedNativeAlias = toNative({
         repoBaseUrl,
         name: alias,
-        ...native,
+        ...native
       });
       appendToFile(folderName, fileName, parsedNativeAlias);
     }
@@ -186,9 +192,16 @@ function nativesToFile(folderName, fileName, repoBaseUrl, natives) {
 
 function appendToFile(folderName, fileName, content) {
   fs.writeFileSync(
-    path.join(__dirname, "Lua", "natives", folderName, `${fileName}.lua`),
+    path.join(
+      __dirname,
+      "fivem",
+      "Lua",
+      "natives",
+      folderName,
+      `${fileName}.lua`
+    ),
     content,
-    { flag: "a" },
+    { flag: "a" }
   );
 }
 

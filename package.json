@@ -1,0 +1,11 @@
+{
+  "name": "NvChad-customdata",
+  "license": "MIT",
+  "scripts": {
+    "build": "node buildNatives.js"
+  },
+  "devDependencies": {
+    "@types/node": "16.x",
+    "axios": "^1.4.0"
+  }
+}
