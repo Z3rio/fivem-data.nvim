@@ -9,6 +9,9 @@ function fx_version(fx_version) end
 ---@param version string
 function version(version) end
 
+---@param toggle string
+function use_fxv2_oal(toggle) end
+
 ---@param author string
 function author(author) end
 
