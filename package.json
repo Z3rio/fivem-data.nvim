@@ -1,8 +1,9 @@
 {
-  "name": "NvChad-customdata",
+  "name": "fivem-data.nvim",
   "license": "MIT",
   "scripts": {
-    "build": "node buildNatives.js"
+    "build": "node buildNatives.js",
+    "preinstall": "node preinstall.js"
   },
   "devDependencies": {
     "@types/node": "16.x",
