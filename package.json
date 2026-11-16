@@ -2,8 +2,7 @@
   "name": "fivem-data.nvim",
   "license": "MIT",
   "scripts": {
-    "build": "node buildNatives.js",
-    "preinstall": "node preinstall.js"
+    "build": "node buildNatives.js"
   },
   "devDependencies": {
     "@types/node": "16.x",
